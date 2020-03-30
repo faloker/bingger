@@ -1,0 +1,34 @@
+{
+  "name": "bingger",
+  "description": "Dead-simple, small and extra-limited tool to search Bing from the command-line.",
+  "version": "1.0.0",
+  "bin": {
+    "bingger": "bin/bingger"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "author": "faloker",
+  "license": "MIT",
+  "dependencies": {
+    "azure-cognitiveservices-websearch": "^2.0.0",
+    "ms-rest-azure": "^3.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "cli",
+    "bing",
+    "search"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faloker/bingger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/faloker/bingger/issues"
+  },
+  "homepage": "https://github.com/faloker/bingger#readme"
+}

@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+const CognitiveServicesCredentials = require('ms-rest-azure')
+  .CognitiveServicesCredentials;
+const WebSearchAPIClient = require('azure-cognitiveservices-websearch');
+
+if (!process.env.BING_API_KEY) {
+  console.error('Missing BING_API_KEY');
+  process.exit(1);
+}
+
+const searchString = process.argv[2];
+
+if (!searchString) {
+  console.error('Missing search pattern');
+  process.exit(1);
+}
+
+let credentials = new CognitiveServicesCredentials(process.env.BING_API_KEY);
+let webSearchApiClient = new WebSearchAPIClient(credentials);
+
+webSearchApiClient.web
+  .search(searchString)
+  .then(result => {
+    if (result['webPages']) {
+      console.log(JSON.stringify(result['webPages'].value, null, 2));
+    } else {
+      console.log([]);
+    }
+  })
+  .catch(err => {
+    throw err;
+  });
