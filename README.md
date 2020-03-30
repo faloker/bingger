@@ -1,7 +1,7 @@
 # Bingger
 Dead-simple, small and extra-limited tool to search Bing from the command-line.
 
-# How To
+## How To
 Get a key from the Azure (free pricing tier):
 https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7
 

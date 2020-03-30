@@ -1,7 +1,7 @@
 {
   "name": "bingger",
   "description": "Dead-simple, small and extra-limited tool to search Bing from the command-line.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "bingger": "bin/bingger"
   },
